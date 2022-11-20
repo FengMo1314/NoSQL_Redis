@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-<!--        -->
+                      <!--引入jedis客户端依赖-->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>

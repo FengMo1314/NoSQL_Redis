@@ -12,7 +12,6 @@ import redis.clients.jedis.JedisPoolConfig;
 public class JedisPoolFactory {
     //声明连接池对象，静态
     private static final JedisPool jedisPool;
-
     static {
         JedisPoolConfig config=new JedisPoolConfig();
         //最大连接数
@@ -26,12 +25,9 @@ public class JedisPoolFactory {
 
         jedisPool=new JedisPool(config,"192.168.88.134",6379,3000,"123456");
     }
-
-
     public static Jedis getJedis(){
         //获取到jedis对象
         return jedisPool.getResource();
-
     }
 
 }
